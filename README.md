@@ -15,6 +15,8 @@ vim-gurl allows you to link to git remotes such as github, gitlab, etc.
 
 ## Basic Usage:
   - Default mapping is set to: \<leader\> t
+  - Use visual mode to capture a range of lines
+  - Use normally to capture current line
 
 ## Requirements:
   - git & pbcopy
