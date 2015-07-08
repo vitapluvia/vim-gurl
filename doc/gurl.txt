@@ -1,0 +1,51 @@
+Gurl      Remote Git Repo Link Generator (Git URL) - v1.0
+
+
+     .---. .-. .-..----. .-.   
+    /   __}| { } || {}  }| |   
+    \  {_ }| {_} || .-. \| `--.
+     `---' `-----'`-' `-'`----'
+
+=============================================================================
+
+CONTENTS
+
+     1. Intro..........................................gurl-intro
+     2. Usage..........................................gurl-usage
+     3. Mappings.......................................gurl-mappings
+
+=============================================================================
+
+INTRO
+
+  Gurl allows you to link to a remote git repository associated with the 
+  file's git config.  This plugin requires git, sed, and pbcopy.
+  Currently this plugin has been tested in OSX on VIM 7.0+.
+  For any issues, questions or contributions, feel free to post here:
+    - https://github.com/vitapluvia/vim-gurl
+
+=============================================================================
+
+USAGE
+
+  To use Gurl, make sure you're editing a file associated with a remote git
+  repository such as one on GitHub.com -- then trigger Gurl by hitting the
+  Gurl Binding (Default): <leader>t 
+
+  Once this has been done, the url of the remote link has been copied to your
+  clipboard (pbcopy), currently there's only support for OSX.
+
+  Another option is to use visual selection with Gurl.
+  Try going into visual line mode, select a block of content and hit the Gurl
+  Binding again.  This will provide a line range for the link.
+
+=============================================================================
+
+MAPPINGS
+
+  To change mapping, in .vimrc map the Gurl call after plugin is loaded:
+      noremap <leader>gr :call Gurl()<CR>
+
+=============================================================================
+
+vim:ft=help:et:ts=2:sw=2:sts=2:norl
