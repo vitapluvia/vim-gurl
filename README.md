@@ -12,7 +12,7 @@
                                                      
 
 ## Description:
-vim-gurl provides links to remote git repos based on lines or selections.
+vim-gurl provides links to remote git repos based on single lines or selections.
 
 ## Example:
 ![vim-gurl](https://cloud.githubusercontent.com/assets/2328639/8764290/c564331a-2d83-11e5-9026-99aae1dee585.gif)
