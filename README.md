@@ -23,12 +23,19 @@ vim-gurl provides links to remote git repos based on single lines or selections.
 ## Customization:
   - To customize mapping, place a mapping in your .vimrc after the plugin has been called, such as:
 
-	```
-	noremap <leader>gr :call Gurl()<CR>
-	```
+  ```
+  noremap <leader>gr :call Gurl()<CR>
+  ```
+
+  - To use the vim clipboard instead of pbcopy, you can specify a clipboard register:
+
+  ```
+  let g:vimgurl_yank_register = '"'
+  ```
 
 ## Requirements:
-  - git & pbcopy
+  - git
+  - pbcopy (optional)
 
 ## Install:
   - Install with your favourite installation method:
