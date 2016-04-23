@@ -3,8 +3,11 @@
 
 function! Gurl()
 
-  " Default Copy Method (OSX)
-  let copyMethod = "pbcopy"
+  if exists("g:vimgurl_yank_register")
+	let copyMethod = 'clipboard'
+  else
+	let copyMethod = "pbcopy"
+  endif
 
   " Get Line Number/s
   let lineNum = line('.')
@@ -43,8 +46,14 @@ function! Gurl()
 
   " Form URL With Line Range
   let url = origin . blob . branch . relative . '#L' . lineRange
-  let test = system("echo '" . url ."'" . " | " . copyMethod)
-  echo url
+
+  " Default Copy Method (OSX)
+  if copyMethod == "pbcopy"
+    let test = system("echo '" . url ."'" . " | " . copyMethod )
+    echo url
+  else
+    execute 'let @' . g:vimgurl_yank_register . ' = "' . url . '"'
+  endif
 
 endfunction
 
